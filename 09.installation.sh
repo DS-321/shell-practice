@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Userid= $(id -u)
-if [ $User -ne 0 ]
+if [ $Userid -ne 0 ]
     then
     echo "ERROR: You are not running with root access"
     exit 1

@@ -19,7 +19,7 @@ if [ $? -ne 0 ]
             then
             echo "SQL is installed ... Successful"
             else
-            echo "ERROR: SQL not installed"
+            echo "SQL not installed ... Failure"
             exit 1
         fi
     else

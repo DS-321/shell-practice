@@ -20,6 +20,7 @@ if [ $? -ne 0 ]
             echo "SQL is installed ... Successful"
             else
             echo "ERROR: SQL not installed"
+            exit 1
         fi
     else
     echo "Sql is already installed... nothing to do"

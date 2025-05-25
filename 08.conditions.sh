@@ -2,7 +2,7 @@
 
 Number=$1
 
-if [ $Number lt 10 ]
+if [ $Number -lt 10 ]
 then
     echo "the number $Number is lethan 10"
 else

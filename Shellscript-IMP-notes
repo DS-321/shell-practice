@@ -20,7 +20,7 @@ Shell Scitping:
 
     which user is running the script: $USER
 
-Colors:
+Colors: 
 
     Red="\e[31m"
     Green="\e[32m"

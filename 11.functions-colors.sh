@@ -5,6 +5,13 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+logs_folder="/var/log/shellscript.logs"
+script_name=$(echo $0 | cut -d "." $f1)
+log_file="$logs_folder/$script_name.log"
+
+mkdir -p $logs_folder
+echo "script started executing at: $(date)" &>>$log_file
+
 Userid=$(id -u)
 if [ $Userid -ne 0 ]
     then
@@ -25,35 +32,35 @@ validate(){
     fi        
 }
 
-dnf list installed mysql
+dnf list installed mysql &>>$log_file
 if [ $? -ne 0 ]
     then
     echo "Sql is not installed... going to install now"
 
-        dnf install mysql -y
+        dnf install mysql -y &>>$log_file
         validate $? "mysql"
 
     else
     echo -e "Sql is already installed... $Y Skipping $N"
 fi
 
-dnf list installed nginx
+dnf list installed nginx &>>$log_file
 if [ $? -ne 0 ]
     then
     echo "nginx is not installed... going to install now"
 
-        dnf install nginx -y
+        dnf install nginx -y &>>$log_file
         validate $? "nginx"
     else
     echo -e "nginx is already installed... $Y Skipping $N"
 fi
 
-dnf list installed python3
+dnf list installed python3 &>>$log_file
 if [ $? -ne 0 ]
     then
     echo "python3 is not installed... going to install now"
 
-        dnf install python3 -y
+        dnf install python3 -y &>>$log_file
         validate $? "python3"
     else
     echo -e "python3 is already installed... $Y Skipping $N"

@@ -11,7 +11,7 @@ log_file="$logs_folder/$script_name.log"
 package=("mysql" "python3" "nginx")
 
 mkdir -p $logs_folder
-echo "script started executing at: $(date)" &>>$log_file
+echo "script started executing at: $(date)" | tee -a $log_file
 
 Userid=$(id -u)
 if [ $Userid -ne 0 ]

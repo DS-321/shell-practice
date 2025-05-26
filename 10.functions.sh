@@ -9,7 +9,7 @@ if [ $Userid -ne 0 ]
     echo "You are running with root access"
 fi
 
-validate () {
+validate (){
 
     if [ $1 -eq 0 ]
     then

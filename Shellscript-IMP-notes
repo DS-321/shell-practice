@@ -1,0 +1,28 @@
+Shell Scitping:
+
+    ~~Special Variables:
+
+    The filename of the current script (script name) - $0
+
+    The number of arguments supplied to a script - $#
+
+    All the arguments/variables are individually double quoted to passed to script - $@
+
+    The exit status of the last command executed - $? (if 0-success othenthan 0 (1-127) -failure)
+
+    The process ID of the current shell script - $$
+
+    The process number of the last background command - $!
+
+    present working directory - $PWD
+
+    home directory of the user who is running the script: $HOME
+
+    which user is running the script: $USER
+
+Colors:
+
+    Red="\e[31m"
+    Green="\e[32m"
+    Yellow="\e[33m"
+    No color="\e[0m"

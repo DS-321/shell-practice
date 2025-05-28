@@ -34,9 +34,9 @@ validate(){
     fi        
 }
 
-    FILES_TO_DELETE=$(find $SRC_DIR -name "*.log" -mtime +14)
+FILES_TO_DELETE=$(find $SRC_DIR -name "*.log" -mtime +14)
 
-    while IFS= read -r filepath
+while IFS= read -r filepath
 
     do
         echo "deleting file: $filepath" | tee -a $log_file
@@ -44,7 +44,7 @@ validate(){
 
     done <<< $FILES_TO_DELETE
 
-    echo "Script executed successfully"
+echo "Script executed successfully"
 
 END_TIME=$(date +%s)
 TOTAL_TIME=$(( $END_TIME - $START_TIME ))

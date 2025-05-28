@@ -26,3 +26,8 @@ Colors:
     Green="\e[32m"
     Yellow="\e[33m"
     No color="\e[0m"
+
+Code with in Other code:
+
+    >>if we call a script with ./ from other script then both scripts will ahve different PID and can't able to access variables/functions from one to other
+    >>where as if we call script like "source ./script2.sh" then both will be having same PID as well as can able to access variables & functions

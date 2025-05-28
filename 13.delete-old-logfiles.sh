@@ -40,7 +40,7 @@ validate(){
 
     do
         echo "deleting file: $filepath" | tee -a $log_file
-        rm -ef $filepath
+        rm -rf $filepath
 
     done <<< $FILES_TO_DELETE
 

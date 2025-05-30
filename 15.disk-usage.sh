@@ -5,7 +5,7 @@ DISK_THRESHOLD=2
 MSG=""
 IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 
-df -hT | grep -v "Filesytem" | while IFS= read line
+df -hT | grep -v "Filesystem" | while IFS= read line
 do
 
     USAGE=$(echo $line | awk '{print $(NF-1)}' | cut -d "%" -f1)

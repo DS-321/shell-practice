@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE=$(df -hT | grep -v "Filesytem")
-DISK_THRESHOLD=5
+DISK_THRESHOLD=2
 MSG=""
 IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
 

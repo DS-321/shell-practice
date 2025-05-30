@@ -17,4 +17,4 @@ do
     fi
 done < $DISK_USAGE
 
-sh 16.mail.sh "DevOps Team" "High Disk Usage" "$IP" "$MSG" "sharmiladaram5@gmail.com" "ALERT-High Disk Usage"
+source ./16.mail.sh "DevOps Team" "High Disk Usage" "$IP" "$MSG" "sharmiladaram5@gmail.com" "ALERT-High Disk Usage"

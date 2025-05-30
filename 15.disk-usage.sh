@@ -15,6 +15,6 @@ do
     then
         MSG+="High Disk Usage on $PARTITION: $USAGE % <br>"
     fi
-done < $DISK_USAGE
+done <<< $DISK_USAGE
 
 source ./16.mail.sh "DevOps Team" "High Disk Usage" "$IP" "$MSG" "sharmiladaram5@gmail.com" "ALERT-High Disk Usage"

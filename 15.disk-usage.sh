@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT | grep -v "Filesytem")
+DISK_USAGE=$(df -hT | grep -v "Filesystem")
 DISK_THRESHOLD=2
 MSG=""
 IP=$(curl http://169.254.169.254/latest/meta-data/local-ipv4)
@@ -15,6 +15,6 @@ do
     then
         MSG+="High Disk Usage on $PARTITION: $USAGE% <br>"
     fi
-done < $DISK_USAGE
+done
 
 source ./16.mail.sh "DevOps Team" "High Disk Usage" "$IP" "$MSG" "sharmiladaram5@gmail.com" "ALERT-High Disk Usage"

@@ -11,9 +11,9 @@ SUBJECT=$6
 FINAL_BODY=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/IP_ADDRESS/$IP_ADDRESS/g" -e "s/MSG/$FINAL_MSG/g" template.html) 
 
 {
-echo "To: $TO_ADDRESS"
-echo "Subject: $SUBJECT"
+echo "To: sharmiladaram5@gmail.com"
+echo "Subject: ALERT-High Disk Usage"
 echo "Content-Type: text/html"
 echo ""
 echo "$FINAL_BODY"
-} | msmtp "$TO_ADDRESS"
+} | msmtp "sharmiladaram5@gmail.com"
